@@ -8,10 +8,10 @@ services:
     environment:
       - database_url=postgres://user:password@postgres:5432/DB
     ports:
-      - "1026:1026"
+      - "8000:8000"
     volumes:
       - .:/app
-    command: bash -c "poetry run python3 main.py"
+    command: bash -c "cd /app && poetry run python3 src/app/main.py"
     depends_on:
       - postgres
 
