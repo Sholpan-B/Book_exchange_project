@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "book-exchange"
+version = "0.1.0"
+description = "Book Exchange and Literary Discussion Platform"
+authors = ["Sholpan Bakhtybekkyzy <pasadena2929@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.104.1"
+uvicorn = "^0.23.2"
+poetry = "^1.6.1"
+tortoise-orm = {extras = ["asyncpg"], version = "^0.20.0"}
+aerich = "^0.7.2"
+
+[tool.poetry.extras]
+postgres = ["psycopg2-binary"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
